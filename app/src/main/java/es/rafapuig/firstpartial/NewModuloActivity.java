@@ -57,7 +57,7 @@ public class NewModuloActivity extends AppCompatActivity {
     }
 
     private void initRadioGroupCourseLevel() {
-        //TODO: set the listener si that when radio button selected changes calls onRadioGroupCursoChanged callback method
+        //TODO: set the listener so that when radio button selected changes calls onRadioGroupCursoChanged callback method
         binding.rbgCourseLevel.setOnCheckedChangeListener(this::onRadioGroupCursoChanged);
     }
 
@@ -95,7 +95,7 @@ public class NewModuloActivity extends AppCompatActivity {
     }
 
     private void initSeekBarWeeklyHours() {
-        //TODO set a listenet that updates the WeeklyHoursTextView dependind on the progress value
+        //TODO set a listener that updates the WeeklyHoursTextView depending on the progress value
         seekBarHours = findViewById(R.id.seekBarWeekHours);
 
         seekBarHours.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
