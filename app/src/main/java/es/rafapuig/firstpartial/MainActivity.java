@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     FileDataAccessManager<Modulo> dataAccessManager;
     private int currentModuleIndex = -1;
 
+    // This variable stores the index of the register to show initially when
+    // the activity starts
     private int initialModuleIndex;
 
     @Override
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //TODO: Create the ActivityResultLauncher
-    //TODO: set onActivityResult callback method lastModulePosition = collectionSize if RESULT_OK
+    //TODO: set onActivityResult callback method initialModuleIndex = collectionSize if RESULT_OK
 
     ActivityResultLauncher<Intent> startNewModuloActivityForResult = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
