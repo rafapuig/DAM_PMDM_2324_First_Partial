@@ -35,7 +35,7 @@ public class ModuleFileDataAccessManager extends FileDataAccessManager<Modulo> {
         int cursoOrdinal = dis.readInt();
         Curso curso = EnumSet.allOf(Curso.class).stream().filter(curso1 -> curso1.ordinal() == cursoOrdinal).findFirst().get();
 
-        //TODO: read the reamining fields
+        //TODO: read the remaining fields
         String moduleName = dis.readUTF();
         int weeklyHours = dis.readInt();
         String teacherName = dis.readUTF();
