@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void initRegisterIndex() {
-        // TODO: Point to the first register in the collection
+        // TODO: Point to the register in the collection we will show initially
         if (!dataAccessManager.getAllRegisters().isEmpty()) currentModuleIndex = initialModuleIndex;
         else currentModuleIndex = -1;
     }
