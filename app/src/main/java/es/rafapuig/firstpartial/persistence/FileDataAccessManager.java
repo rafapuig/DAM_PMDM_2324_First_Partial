@@ -34,7 +34,7 @@ public abstract class FileDataAccessManager<T> {
     // So, the first real SD card is the second of the array
     private File[] sdCards; //SD cards available array
 
-    Context context;
+    Context context;    // The activity that is instantiating the object
 
     public FileDataAccessManager(Context context, String filename) {
         this.filename = filename;
@@ -47,7 +47,7 @@ public abstract class FileDataAccessManager<T> {
         String stateSD = Environment.getExternalStorageState();
         isWriteableSD = stateSD.equals(Environment.MEDIA_MOUNTED);
 
-        // Now, check that it is not the emulated
+        // Now, check that it is not the emulated one
         if (isWriteableSD) {
             // Get SD cards folders paths
             sdCards = ContextCompat.getExternalFilesDirs(context, null);
@@ -76,7 +76,7 @@ public abstract class FileDataAccessManager<T> {
             tryToWriteDataToFile(register);
             return true;
         } catch (IOException e) {
-            Log.i("", "There was an error writing to the file!" + e.getMessage());
+            Log.i(this.getClass().getName(), "There was an error writing to the file!" + e.getMessage());
         }
         return false;
     }
